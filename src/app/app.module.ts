@@ -9,6 +9,9 @@ import { HomeComponent } from './home/home.component';
 //routes
 import { appRoutes } from './app.routes';
 
+// Services
+import { MemberService } from './modules/member/member.service'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +20,7 @@ import { appRoutes } from './app.routes';
   imports: [
     BrowserModule, RouterModule.forRoot(appRoutes)
   ],
-  providers:[],
+  providers: [MemberService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

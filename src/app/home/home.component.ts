@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MemberService } from 'app/modules/member/member.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private memberService: MemberService
+  ) {}
 
   ngOnInit() {
+    this.memberService.$sub.subscribe(() => {
+      alert("Subscribed Event emitted from member service.")
+    })
   }
 
 }

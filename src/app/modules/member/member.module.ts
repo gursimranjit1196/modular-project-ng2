@@ -9,7 +9,7 @@ import { MemberDetailsComponent } from './member-details/member-details.componen
 import { memberRoutes } from './member.routes';
 
 @NgModule({
-  imports:      [ RouterModule.forChild(memberRoutes) ],
+  imports: [RouterModule.forChild(memberRoutes) ],
   declarations: [ MemberComponent, MemberDetailsComponent ]
 })
 export class MemberModule { }
